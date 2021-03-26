@@ -40,7 +40,7 @@ router.get('/:id', async (req, res) => {
     })
 
     if (!CategData) {
-      res.status(404).json({ message: 'No Category found with that ID!' });
+      res.status(404).json({ message: 'No Category with this ID!' });
       return;
     }
 
@@ -74,7 +74,7 @@ router.put('/:id', async (req, res) => {
         where: {id: req.params.id }
       })
     if (!CategData[0]) {
-      res.status(404).json({ message: 'No Category with this id!' });
+      res.status(404).json({ message: 'No Category with this ID!' });
       return;
     }
     res.status(200).json(CategData);
@@ -94,7 +94,7 @@ router.delete('/:id', async (req, res) => {
     })
 
     if (!CategData) {
-      res.status(404).json({ message: 'No Category with this id!' });
+      res.status(404).json({ message: 'No Category with this ID!' });
       return;
     }
 
